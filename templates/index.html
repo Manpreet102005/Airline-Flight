@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Ticket Predictor</title>
+    <link rel="stylesheet" href="static\style.css">
+</head>
+
+<body>
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+    <div class="circle c4"></div>
+    <div class="panels left"></div>
+    <div class="panels right"></div>
+    <div class="panels top"></div>
+    <div class="panels bottom"></div>
+
+    <div class="body-div">
+        <h1> Flight Ticket Price Predictor </h1>
+        <form class="form-div" method="post">
+            <span class="row">
+                <span class="left">
+                    <label for="airline">Airline:</label><br>
+                    <select required  name="airline"  id="airline" for="airline">
+                        <option value="" disabled selected >--Select--</option>
+                        <option value="Vistara">Vistara</option>
+                        <option value="Air_India">Air India</option>
+                        <option value="Indigo">Indigo</option>
+                        <option value="GO_FIRST">Go First</option>
+                        <option value="AirAsia">Air Asia</option>
+                        <option value="Spicejet">Spicejet</option>
+                    </select>
+                </span>
+                <span class="right">
+                    <label for="days-left">Days Left:</label><br>
+                    <input class="numeric_input"  required type="number" name='days_left'>
+                </span>
+            </span><br>
+            <span class='row '>
+                <span class="left">
+                    <label for="from">From:</label><br>
+                    <select required id="from" for="from">
+                        <option value="" disabled selected>--Select--</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Kolkata">Kolkata></option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Chennai">Chennai</option>
+                    </select>
+                </span>
+                <span class="right">
+                    <label for="to">To:</label><br>
+                    <select required id="to" for="to">
+                        <option value="" disabled selected>--Select--</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Kolkata">Kolkata></option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Chennai">Chennai</option>
+                    </select>
+                </span>
+            </span><br>
+            <span class =row>
+                <span class="left">
+                    <label for="departure">Departure Time:</label><br>
+                    <select required id="departure" for="departure">
+                        <option value="" disabled selected>--Select--</option>
+                        <option value="Early_Morning">Early Morning</option>
+                        <option value="Morning">Morning</option>
+                        <option value="Afternoon">Afternoon</option>
+                        <option value="Evening">Evening</option>
+                        <option value="Night">Night</option>
+                        <option value="Late_Night">Late Night</option>
+                    </select>
+                </span>
+                <span class="right">
+                    <label for="arrival">Arrival Time:</label><br>
+                    <select required id="arrival" for="arrival">
+                        <option value="" disabled selected>--Select--</option>
+                        <option value="Early_Morning">Early Morning</option>
+                        <option value="Morning">Morning</option>
+                        <option value="Afternoon">Afternoon</option>
+                        <option value="Evening">Evening</option>
+                        <option value="Night">Night</option>
+                        <option value="Late_Night">Late Night</option>
+                    </select>
+                </span>
+            </span><br><br>
+            <span class="row row4">
+                <label for="Stops">Stops:</label>
+                <span class="stop-radio">
+                <span>
+                    <input type="radio" name="stops" value="zero" id="stops" required>
+                    <label>0</label>
+                </span>
+                <span>
+                    <input type="radio" name="stops" value="one" id="stops">
+                    <label>1</label>
+                </span>
+                <span>
+                    <input type="radio" name="stops" value="two_or_more" id="stops">
+                    <label>2 or more</label>
+                </span>
+                </span>
+            </span><br>
+            <span class="row">
+                <label for="class">Class:</label>
+                <span class="class-radio">
+                    <span>
+                        <input type="radio" name="class" value="Business" id="class" required>
+                        <label>Economy</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="class" value="Economy" id="class">
+                        <label>Business</label>
+                    </span>
+                </span>
+            </span><br>
+            <span class="row row6">
+                <label for="duration">Duration (hours):</label>
+                <input class="numeric_input numeric_input_last" type="number" required name="duration" >
+            </span><br>
+            <span class=" row">
+                <button type="submit">Submit</button>
+                <button type="reset" href="/">Reset</button>
+            </span> 
+        </div>
+        <span class="result">
+            {% if prediction %}
+                <h3>Predicted Price:</h3>
+                <h3>{{predicted}}</h3>
+            {% endif %}
+        </span>
+    </div>
+</body>
+
+</html>
