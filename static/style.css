@@ -1,0 +1,79 @@
+body {
+    background-image: url("img.jpg");
+    background-repeat:repeat;
+    background-size: contain;
+    background-position:bottom;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h1{
+    color: #0094C6;
+    font-style:oblique;
+    background-color: white;
+    font-size:35px;
+}
+.body-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+.form-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px dashed  black;
+    padding: 15px 15px 15px 15px;
+    width: 50%;
+    background-color: #E1E5F2;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.row6{
+    justify-content: space-evenly;
+}
+.stop-radio{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.class-radio{
+    width: 31%;
+    justify-content: space-between;
+}
+label{
+    font-size:large;
+}
+select,.numeric_input{
+    width: 120px;
+    height:21px;
+    border: 1px  solid black ;
+    border-radius: 12px;
+}
+.numeric_input_last{
+    width: 17%;
+}
+.numeric_input{
+    width: 115px;
+    height: 17px;
+}
+.result{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+button{
+    width: 15%;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+}
+butt
