@@ -135,6 +135,9 @@
                 <h3>Predicted Price:</h3>
                 <h3>{{predicted}}</h3>
             {% endif %}
+            {% if error_msg %}
+                <h3>{{error_msg}}</h3>
+            {% endif %}
         </span>
     </div>
 </body>
