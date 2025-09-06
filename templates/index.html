@@ -21,12 +21,12 @@
                     <label for="airline">Airline:</label><br>
                     <select required  name="airline">
                         <option value="" disabled selected >--Select--</option>
-                        <option value="Vistara">Vistara</option>
-                        <option value="Air_India">Air India</option>
-                        <option value="Indigo">Indigo</option>
-                        <option value="GO_FIRST">Go First</option>
-                        <option value="AirAsia">Air Asia</option>
-                        <option value="Spicejet">Spicejet</option>
+                        <option value="Vistara" {% if airline == Vistara %} selected {% endif %}>Vistara</option>
+                        <option value="Air_India" {% if airline == Air_India %} selected {% endif %}>Air India</option>
+                        <option value="Indigo" {% if airline == Indigo %} selected {% endif %}>Indigo</option>
+                        <option value="GO_FIRST" {% if airline == GO_FIRST %} selected {% endif %}>Go First</option>
+                        <option value="AirAsia" {% if airline == AirAsia %} selected {% endif %}>Air Asia</option>
+                        <option value="Spicejet" {% if airline == SpiceJet %} selected {% endif %}>Spicejet</option>
                     </select>
                 </span>
                 <span class="right">
@@ -39,24 +39,24 @@
                     <label for="from">From:</label><br>
                     <select required name="from_city" >
                         <option value="" disabled selected>--Select--</option>
-                        <option value="Delhi">Delhi</option>
-                        <option value="Mumbai">Mumbai</option>
-                        <option value="Bangalore">Bangalore</option>
-                        <option value="Kolkata">Kolkata</option>
-                        <option value="Hyderabad">Hyderabad</option>
-                        <option value="Chennai">Chennai</option>
+                        <option value="Delhi"  {% if from_city == Delhi %} selected {% endif% }>Delhi</option>
+                        <option value="Mumbai" {% if from_city == Mumbai %} selected {% endif %}>Mumbai</option>
+                        <option value="Bangalore" {% if from_city == Bangalore %} selected {% endif %}>Bangalore</option>
+                        <option value="Kolkata" {% if from_city == Kolkata %} selected {% endif %}>Kolkata</option>
+                        <option value="Hyderabad" {% if from_city == Hyderabad %} selected {% endif %}>Hyderabad</option>
+                        <option value="Chennai" {% if from_city == Chennai %} selected {% endif %}>Chennai</option>
                     </select>
                 </span>
                 <span class="right">
                     <label for="to">To:</label><br>
                     <select required name="to_city" >
                         <option value="" disabled selected>--Select--</option>
-                        <option value="Delhi">Delhi</option>
-                        <option value="Mumbai">Mumbai</option>
-                        <option value="Bangalore">Bangalore</option>
-                        <option value="Kolkata">Kolkata</option>
-                        <option value="Hyderabad">Hyderabad</option>
-                        <option value="Chennai">Chennai</option>
+                        <option value="Delhi"  {% if to_city == Delhi %} selected {% endif% }>Delhi</option>
+                        <option value="Mumbai" {% if to_city == Mumbai %} selected {% endif %}>Mumbai</option>
+                        <option value="Bangalore" {% if to_city == Bangalore %} selected {% endif %}>Bangalore</option>
+                        <option value="Kolkata" {% if to_city == Kolkata %} selected {% endif %}>Kolkata</option>
+                        <option value="Hyderabad" {% if to_city == Hyderabad %} selected {% endif %}>Hyderabad</option>
+                        <option value="Chennai" {% if to_city == Chennai %} selected {% endif %}>Chennai</option>
                     </select>
                 </span>
             </span><br>
@@ -65,24 +65,24 @@
                     <label for="departure">Departure Time:</label><br>
                     <select required name="departure">
                         <option value="" disabled selected>--Select--</option>
-                        <option value="Early_Morning">Early Morning</option>
-                        <option value="Morning">Morning</option>
-                        <option value="Afternoon">Afternoon</option>
-                        <option value="Evening">Evening</option>
-                        <option value="Night">Night</option>
-                        <option value="Late_Night">Late Night</option>
+                        <option value="Early_Morning" {% if departure == "Early_Morning" %} selected{%endif%}>Early Morning</option>
+                        <option value="Morning"{% if departure==Morning %} selected {% endif %}>Morning</option>
+                        <option value="Afternoon" {% if departure == Afternoon %} selected {% endif%}>Afternoon</option>
+                        <option value="Evening" {% if departure == Evening %} selected {% endif %}>Evening</option>
+                        <option value="Night"  {% if departure == Night %} selected {% endif %}>Night</option>
+                        <option value="Late_Night"  {% if departure == Late_Night %} selected {% endif% }>Late Night</option>
                     </select>
                 </span>
                 <span class="right">
                     <label for="arrival">Arrival Time:</label><br>
                     <select required name="arrival" >
                         <option value="" disabled selected>--Select--</option>
-                        <option value="Early_Morning">Early Morning</option>
-                        <option value="Morning">Morning</option>
-                        <option value="Afternoon">Afternoon</option>
-                        <option value="Evening">Evening</option>
-                        <option value="Night">Night</option>
-                        <option value="Late_Night">Late Night</option>
+                        <option value="Early_Morning" {% if arrival == "Early_Morning" %} selected{%endif%}>Early Morning</option>
+                        <option value="Morning"{% if arrival==Morning %} selected {% endif %}>Morning</option>
+                        <option value="Afternoon" {% if arrival == Afternoon %} selected {% endif%}>Afternoon</option>
+                        <option value="Evening" {% if arrival == Evening %} selected {% endif %}>Evening</option>
+                        <option value="Night"  {% if arrival == Night %} selected {% endif %}>Night</option>
+                        <option value="Late_Night"  {% if arrival == Late_Night %} selected {% endif% }>Late Night</option>
                     </select>
                 </span>
             </span><br>
