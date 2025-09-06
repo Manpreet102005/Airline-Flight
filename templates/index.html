@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airline Ticket Predictor</title>
-    <link rel="stylesheet" href="static\style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                 </span>
                 <span class="right">
                     <label for="days_left">Days Left:</label><br>
-                    <input class="numeric_input"  required type="number" step="0.01" name='days_left'>
+                    <input value="{{days_left or ''}}" class="numeric_input"  required type="number" step="0.01" name='days_left'>
                 </span>
             </span><br>
             <span class='row '>
@@ -90,15 +90,18 @@
                 <label for="Stops">Stops:</label>
                 <span class="stop-radio">
                 <span>
-                    <input type="radio" name="stops" value="zero" required>
+                    <input type="radio" name="stops"  required value="zero" {% if
+                        stops=='zero' %}checked{% endif %}>
                     <label>0</label>
                 </span>
                 <span>
-                    <input type="radio" name="stops" value="one">
+                    <input type="radio" name="stops" value="one"{% if
+                        stops=='one' %}checked{% endif %}>
                     <label>1</label>
                 </span>
                 <span>
-                    <input type="radio" name="stops" value="two_or_more">
+                    <input type="radio" name="stops" value="two_or_more" {% if
+                        stops=='two_or_more' %}checked{% endif %}>
                     <label>2 or more</label>
                 </span>
                 </span>
@@ -107,18 +110,20 @@
                 <label for="class">Class:</label>
                 <span class="class-radio">
                     <span>
-                        <input type="radio" name="class" value="Economy"  required>
+                        <input type="radio" name="class" value="Economy"{% if
+                        stops=='Economy' %}checked{% endif %}  required>
                         <label>Economy</label>
                     </span>
                     <span>
-                        <input type="radio" name="class" value="Business" >
+                        <input type="radio" name="class"{% if
+                        stops=='Business' %}checked{% endif %} value="Business" >
                         <label>Business</label>
                     </span>
                 </span>
             </span><br>
             <span class="row row6">
                 <label for="duration">Duration (hours):</label>
-                <input class="numeric_input numeric_input_last" type="number"  step='0.01' required name="duration" >
+                <input class="numeric_input numeric_input_last" type="number"  step='0.01' required name="duration" value="{{duration or ''}}" >
             </span><br>
             <span class=" row">
                 <button type="submit">Submit</button>
